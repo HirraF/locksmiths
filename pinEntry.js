@@ -4,6 +4,10 @@ function checkPin() {
     const pinValue = document.querySelector("#pinEntry").value
     if (pinValue !== "1234") {
         showPinError()
+    } else {
+        //TODO - redirect to success page
+        document.querySelector("#pinEntry").classList.remove("nhsuk-input--error")
+        document.querySelector("#pinEntryForm").classList.remove("nhsuk-form-group--error")
     }
 }
 
@@ -11,6 +15,7 @@ function showPinError() {
     document.querySelector("#pinEntry").classList.add("nhsuk-input--error")
     document.querySelector("#pinEntryForm").classList.add("nhsuk-form-group--error")
     if (attempts < 1) {
+        //TODO - redirect to lockout page
         document.querySelector("#lockedOut").style.display = "block"
     } else {
         evaluateCooldown()
