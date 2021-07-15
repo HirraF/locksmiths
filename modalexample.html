@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+<title>Confirm Recovery Information</title>
+<link rel="stylesheet" href="https://nhsuk.github.io/nhsuk-frontend/assets/nhsuk.css">
+
+</head>
+
+    <body>
+        
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="nhsuk-width-container">
+        <main class="nhsuk-main-wrapper" id="maincontent">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <fieldset class="nhsuk-fieldset">
+                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+                            <h1 class="nhsuk-fieldset__heading">
+                                Confirm Recovery Information
+                            </h1>
+                        </legend>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <p>Take a moment to check your details are up to date. You'll need these to reset your PIN if you ever forget it or get locked out.</p>
+                </div>
+            </div>
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                Email address
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                bob.bingi@nhs.net
+                            </dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> email address</span>
+                                </a>
+                            </dd>
+                        </div>
+    
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                Phone number
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                0800 123 456
+                            </dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> phone number</span>
+                                </a>
+                            </dd>
+                        </div>
+    
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">
+                                Memorable questions
+                            </dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <p>What is your favourite flavour of ice cream?</p>
+                                <p>What is your dog's middle name?</p>
+                                <p>How many fingers am I holding up?</p>
+                            </dd>
+    
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> memorable questions</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <button class="nhsuk-button" type="submit" style="float: right;">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
