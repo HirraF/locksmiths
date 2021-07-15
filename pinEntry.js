@@ -5,9 +5,9 @@ function checkPin() {
     if (pinValue !== "1234") {
         showPinError()
     } else {
-        //TODO - redirect to success page
         document.querySelector("#pinEntry").classList.remove("nhsuk-input--error")
         document.querySelector("#pinEntryForm").classList.remove("nhsuk-form-group--error")
+        window.location.href = "./detailsSummary.html"
     }
 }
 
