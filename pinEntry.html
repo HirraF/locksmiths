@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in with smartcard</title>
+    <link rel="stylesheet" href="https://nhsuk.github.io/nhsuk-frontend/assets/nhsuk.css">
+    <script src="./pinEntry.js"></script>
+</head>
+<body>
+<div class="nhsuk-width-container">
+    <main class="nhsuk-main-wrapper" id="maincontent">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+                        <h1 class="nhsuk-fieldset__heading">
+                            Log in with smartcard
+                        </h1>
+                    </legend>
+                </fieldset>
+            </div>
+        </div>
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <div class="nhsuk-form-group" id="pinEntryForm">
+                    <label class="nhsuk-label" for="pinEntry">
+                        PIN
+                    </label>
+                    <span class="nhsuk-error-message" id="incorrectPin" style="display: none;">
+                        <span class="nhsuk-u-visually-hidden">Error:</span> Incorrect PIN. <span id="cooldown"></span>
+                    </span>
+                    <span class="nhsuk-error-message" id="lockedOut" style="display: none;">
+                        <span class="nhsuk-u-visually-hidden">Error:</span> Locked out.
+                    </span>
+                    <input class="nhsuk-input" id="pinEntry" name="pinEntry" type="text" aria-describedby="incorrectPin">
+                </div>
+            </div>
+        </div>
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <button class="nhsuk-button" type="submit" id="submit" style="float: right;">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
